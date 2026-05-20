@@ -1,21 +1,24 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
 body{
     background-color: #192a4a;
-background-repeat: no-repeat;
-background-attachment: fixed;
-display: flex;
-justify-content: center;
-align-items: center;
-min-height: 100vh;
-
-
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .start_pg{
 
     background-color: #192a4a;
     height: 100%;
-width: 100%;
-position: fixed;
+    width: 100%;
+    position: fixed;
     color: white;
     display: flex;
     justify-content: center;
@@ -25,8 +28,7 @@ position: fixed;
 
 .start_btn{
     font-family: "Times New Roman", Times, serif;
-
-    font-size: 35px;
+     font-size: 35px;
     color: #fcf9f8;
     padding: 10px;
     background-color: #ff9f05;
@@ -44,8 +46,8 @@ position: fixed;
     position: fixed;
     display: flex;
     flex-direction: column;
-        background-color: #fcfbfc;
-        opacity: 80%;
+    background-color: #fcfbfc;
+    opacity: 80%;
     color: #192a4a;
     border: none;
     border-radius: 10px;
@@ -67,18 +69,18 @@ border-radius: 10px;
 
 }
 #heading{
-background-color:  #ff9f05;
- color: white;
-  height: 50px; 
-  width:350px; 
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 25px;
-font-weight: bold;
-border: none;
-border-radius: 10px;
-margin-bottom: 10px;
+    background-color:  #ff9f05;
+     color: white;
+      height: 50px; 
+      width:350px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
 
 }
 .container{
@@ -99,7 +101,7 @@ margin-bottom: 10px;
     width: 340px;
     display: flex;
     justify-content: center;
-flex-direction: column;
+    flex-direction: column;
 }
 
 .btn{
@@ -111,9 +113,9 @@ flex-direction: column;
     width:330px;
     align-items: center;
     background-color: #fbfbfa;
-color: #021e53;
-border: 3px solid #192a4a ;
-border-radius: 10px;
+    color: #021e53;
+    border: 3px solid #192a4a ;
+    border-radius: 10px;
 
 }
 .btn:hover{
