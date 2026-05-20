@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="start_pg hide">
+        <button class="start_btn ">Start Quiz</button>
+
+        <div class="popup hide">
+            <div id="heading">Rules of the Quiz</div>
+            <p style="margin:3px; ">  <i class="fa-solid fa-circle-dot" style="color: rgb(47, 83, 150);"></i> You only have 10 seconds for each question.</p>
+            <p style="margin:3px;">  <i class="fa-solid fa-circle-dot" style="color:rgb(47, 83, 150);"></i> You have to select an option before ypu can go to the next question.</p>
+             <p style="margin:3px;"> <i class="fa-solid fa-circle-dot" style="color: rgb(47, 83, 150);"></i>There's no going back after selecting an option.</p>
+             <p style="margin:3px;"> <i class="fa-solid fa-circle-dot" style="color: rgb(47, 83, 150);"></i>You cannot select an option once the timer goes off.</p>
+             <p style="margin:3px;"> <i class="fa-solid fa-circle-dot" style="color: rgb(47, 83, 150);"></i>You cannot exit the quiz while playing.</p>
+
+             <div id="buttons" style="display: flex; align-items: center; justify-content: center; margin: 1rem; gap: 3rem;">
+                    <button id="exit">Exit </button>
+                     <button id="continue">Continue</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container ">
+        <div style="float: right; display: flex;"> <i class="fa-solid fa-clock" style="color: rgb(255, 158, 0);"></i><p id="timer" style="margin :0 0 0 5px;"> 00:00 </p></div>
+
+       <div class="container2">
+            <p id="Question" > What is the capital of India ?</p>
+            <div class="option">
+                <button class="btn">Jaipur</button>
+                <button  class="btn">Delhi</button>
+                <button  class="btn"> Goa</button>
+                <button  class="btn">Mumbai</button>
+        </div>
+    
+        <p class="msg  hide">your answer is correct</p>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
