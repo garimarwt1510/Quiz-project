@@ -2,23 +2,24 @@
     padding: 0%;
     margin: 0%;
 }
-
 body{
     background-color: #192a4a;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+background-repeat: no-repeat;
+background-attachment: fixed;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+
+
 }
 
 .start_pg{
 
     background-color: #192a4a;
     height: 100%;
-    width: 100%;
-    position: fixed;
+width: 100%;
+position: fixed;
     color: white;
     display: flex;
     justify-content: center;
@@ -28,7 +29,8 @@ body{
 
 .start_btn{
     font-family: "Times New Roman", Times, serif;
-     font-size: 35px;
+
+    font-size: 35px;
     color: #fcf9f8;
     padding: 10px;
     background-color: #ff9f05;
@@ -46,33 +48,34 @@ body{
     position: fixed;
     display: flex;
     flex-direction: column;
-    background-color: #fcfbfc;
-    opacity: 80%;
+        background-color: #fcfbfc;
+        opacity: 80%;
     color: #192a4a;
     border: none;
     border-radius: 10px;
     padding: 8px;
 }
 
-#buttons button{
+#two_btn button{
 font-size: 20px;
 background-color: #fbfbfa;
 color: #ff9f05;
 border: 3px solid #ff9f05 ;
 border-radius: 10px;
+padding: 4px;
 
 
 }
-#buttons button:hover{
+#two_btn button:hover{
     background-color:#ff9f05 ;
     color: #fbfbfa;
 
 }
 #heading{
     background-color:  #ff9f05;
-     color: white;
-      height: 50px; 
-      width:350px; 
+    color: white;
+    height: 50px; 
+     width:350px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,7 +104,7 @@ border-radius: 10px;
     width: 340px;
     display: flex;
     justify-content: center;
-    flex-direction: column;
+flex-direction: column;
 }
 
 .btn{
@@ -112,18 +115,21 @@ border-radius: 10px;
     height:40px ;
     width:330px;
     align-items: center;
+    padding-left: 10px ;
     background-color: #fbfbfa;
-    color: #021e53;
-    border: 3px solid #192a4a ;
-    border-radius: 10px;
+color: #021e53;
+border: 3px solid #192a4a ;
+border-radius: 10px;
 
 }
 .btn:hover{
     border: 3px solid #617dae;
+    cursor: pointer;
 }
 #Question{
     font-size: 20px;
-    color: #be7603;
+    color:rgb(235, 145, 0);
+    margin: 1rem;
 }
 .hide{
     display:none;
