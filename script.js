@@ -12,6 +12,7 @@ let currentO=0;
 let sec=0;
 let msec=0;
 let id;
+let score=0;
 
 
 startBtn.classList.remove("hide");
@@ -26,17 +27,17 @@ const quizData = [
     },
     {
         question: "What is the size of an empty class in C++?",
-        options: ["0 bytes", "1 bytes", "2 bytes", "Depends on compiler only"],
+        options: ["1 bytes", "2 bytes", "0 bytes", "Depends on compiler only"],
         answer: "1 bytes"
     },
     {
         question: "Which feature allow the same function name with different parameter lists?",
-        options: ["Overriding", "Overloading", "Encapsulation", "Abstraction"],
+        options: ["Overriding", "Encapsulation", "Overloading", "Abstraction"],
         answer: "Overloading"
     },
     {
         question: "What is the purpose of a virtual function?",
-        options: ["Increase memory", "Runtime polymorphism", "Compile-time checking", "Dyanmic memory alloction"],
+        options: ["Increase memory", "Compile-time checking", "Dyanmic memory alloction", "Runtime polymorphism"],
         answer: "Runtime polymorphism"
     },
     {
@@ -57,27 +58,43 @@ storeOp();
 for(let btn of btns){
     btn.addEventListener('click',(e)=>{
         let select=e.target.innerText;
+        let ans=quizData[currentQ].answer;
+
+        if(select==ans){
+            e.target.style.backgroundColor="#87e06c";
+            e.target.style.border="3px solid  #192a4a";
+               clearInterval(id);
+              score++
+  
+          }
+          else{
+            e.target.style.backgroundColor="#f34f4f";
+          e.target.style.color="white";
+            for(let i=0;i<4;i++){
+                if(btns[i].innerText==ans){
+                    btns[i].style.backgroundColor="#87e06c";
+                    console.log(btns[i].innerText );
+                }
+            }
+             
+
+          }
 
         setTimeout(()=>{
-            if(select==quizData[currentQ].answer){
-                e.target.style.backgroundColor="green";
-                  e.target.style.color="white";
-                   clearInterval(id);
-                  console.log(select);
-      
-              }
-      
-
-        },100);
+            e.target.style.backgroundColor="white";
+            e.target.style.color="#192a4a";
+            for(let btn of btns){
+                btn.style.backgroundColor="white";
+                btn.style.color="#192a4a";
+            }
+            currentQ++;
+            quest();
+            currentO=0;
+            storeOp();
+           
+           
+        },1000);
         
-                e.target.style.backgroundColor="white";
-        e.target.style.color="#192a4a";
-        currentQ++;
-        quest();
-        currentO=0;
-        storeOp();
-       
-
 
     });
 }
