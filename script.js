@@ -6,7 +6,8 @@ let startPg =document.querySelector(".start_pg");
 let popMsg=document.querySelector(".popup");
 let exit=document.querySelector("#exit");
 let cnt=document.querySelector("#continue");
-let ques=document.querySelector("#Question")
+let ques=document.querySelector("#Question");
+let score_msg=document.querySelector("#score");
 let currentQ=0;
 let currentO=0;
 let sec=0;
@@ -64,16 +65,16 @@ for(let btn of btns){
             e.target.style.backgroundColor="#87e06c";
             e.target.style.border="3px solid  #192a4a";
                clearInterval(id);
-              score++
-  
-          }
+              score++;
+        }
+              
           else{
             e.target.style.backgroundColor="#f34f4f";
           e.target.style.color="white";
             for(let i=0;i<4;i++){
                 if(btns[i].innerText==ans){
                     btns[i].style.backgroundColor="#87e06c";
-                    console.log(btns[i].innerText );
+                  
                 }
             }
              
@@ -86,6 +87,14 @@ for(let btn of btns){
             for(let btn of btns){
                 btn.style.backgroundColor="white";
                 btn.style.color="#192a4a";
+            }
+            if(currentQ==4){
+                console.log(score);
+                msg.classList.remove("hide");
+                score_msg.innerText=`Nice, you got ${score} out of 5`;
+
+
+
             }
             currentQ++;
             quest();
@@ -139,5 +148,6 @@ exit.addEventListener('click',()=>{
 
 let quest=()=>{
 ques.innerText= quizData[currentQ].question;
+
 }
 quest();
