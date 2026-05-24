@@ -4,12 +4,12 @@
 }
 body{
     background-color: #192a4a;
-background-repeat: no-repeat;
-background-attachment: fixed;
-display: flex;
-justify-content: center;
-align-items: center;
-min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 
 
 }
@@ -18,24 +18,23 @@ min-height: 100vh;
 
     background-color: #192a4a;
     height: 100%;
-   width: 100%;
+    width: 100%;
     position: fixed;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .start_btn{
     font-family: "Times New Roman", Times, serif;
-
     font-size: 35px;
-    color: #fcf9f8;
+    color:#fbfbfa;
     padding: 10px;
     background-color: #ff9f05;
     border: 4px solid rgb(254, 244, 225);
     border-radius: 20px;
+
 }
 .start_btn:hover{
     box-shadow: 0 2px 15px rgb(83, 105, 176);
@@ -48,8 +47,8 @@ min-height: 100vh;
     position: fixed;
     display: flex;
     flex-direction: column;
-    background-color: #fcfbfc;
-    opacity: 80%;
+     background-color: #fcfbfc;
+     opacity: 80%;
     color: #192a4a;
     border: none;
     border-radius: 10px;
@@ -57,12 +56,12 @@ min-height: 100vh;
 }
 
 #two_btn button{
-    font-size: 20px;
-    background-color: #fbfbfa;
-    color: #ff9f05;
-    border: 3px solid #ff9f05 ;
-    border-radius: 10px;
-    padding: 4px;
+font-size: 20px;
+background-color: #fbfbfa;
+color: #ff9f05;
+border: 3px solid #ff9f05 ;
+border-radius: 10px;
+padding: 4px;
 
 
 }
@@ -95,8 +94,6 @@ min-height: 100vh;
     border: 5px solid #ff9f05;
     border-radius: 10px;
     box-shadow: inset 2px 2px 10px rgb(155, 151, 151);
-   
-
 
 }
 .container2{
@@ -104,7 +101,7 @@ min-height: 100vh;
     width: 340px;
     display: flex;
     justify-content: center;
-flex-direction: column;
+    flex-direction: column;
 }
 
 .btn{
@@ -117,9 +114,9 @@ flex-direction: column;
     align-items: center;
     padding-left: 10px ;
     background-color: #fbfbfa;
-color: #021e53;
-border: 3px solid #192a4a ;
-border-radius: 10px;
+    color: #021e53;
+    border: 3px solid #192a4a ;
+    border-radius: 10px;
 
 }
 .btn:hover{
@@ -131,9 +128,36 @@ border-radius: 10px;
     color:rgb(235, 145, 0);
     margin: 1rem;
 }
+    
 .msg{
-    height:200px;
-    width:200px;
+    height: 250px;
+    width: 300px;
+    background-color: #213458;
+    position: fixed;
+    border:5px solid #ffae2c;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#f6c77b ;
+    flex-direction: column;
+    font-size: 20px;
+}
+.re_ex{
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+     margin: 1rem; 
+     gap: 3rem;
+}
+.re_ex button{
+    width: 70px;
+    font-size: 17px;
+    background-color: #fbfbfa;
+    color: #ff9f05;
+    border: 3px solid #ff9f05 ;
+    border-radius: 10px;
+    padding: 6px;
 }
 
 .hide{
