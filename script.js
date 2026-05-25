@@ -5,6 +5,7 @@ let timer=document.querySelector("#timer");
 let startPg =document.querySelector(".start_pg");
 let popMsg=document.querySelector(".popup");
 let exit=document.querySelector("#exit");
+let exit1=document.querySelector("#exit1");
 let cnt=document.querySelector("#continue");
 let ques=document.querySelector("#Question");
 let score_msg=document.querySelector("#score");
@@ -49,12 +50,14 @@ const quizData = [
 ];
 
 let storeOp=()=>{
+    if(currentQ < quizData.length){
+
 for(let btn of btns){
     btn.innerText=quizData[currentQ].options[currentO];
     currentO ++;
 }
 }
-storeOp();
+}
 
 for(let btn of btns){
     btn.addEventListener('click',(e)=>{
@@ -89,11 +92,8 @@ for(let btn of btns){
                 btn.style.color="#192a4a";
             }
             if(currentQ==4){
-                console.log(score);
                 msg.classList.remove("hide");
                 score_msg.innerText=`Nice, you got ${score} out of 5`;
-
-
 
             }
             currentQ++;
@@ -104,8 +104,9 @@ for(let btn of btns){
            
         },1000);
         
-
+    
     });
+
 }
 
   
@@ -127,7 +128,6 @@ cnt.addEventListener('click',()=>{
             if(sec == 20)
         {
             clearInterval(id);
-
         }    
         }
         let MSec=msec<10 ? `0${msec}` :msec;
@@ -136,6 +136,9 @@ cnt.addEventListener('click',()=>{
     timer.innerText=`${Sec}:${MSec}`;
     
     },10)
+    quest();
+    storeOp();
+
    
 
 });
@@ -146,8 +149,18 @@ exit.addEventListener('click',()=>{
 
 });
 
-let quest=()=>{
-ques.innerText= quizData[currentQ].question;
+exit1.addEventListener('click',()=>{
+    startBtn.classList.toggle("hide");
+    popMsg.classList.toggle("hide");
+    msg.classList.add("hide");
+    startPg.classList.toggle("hide");
 
+});
+
+
+
+let quest=()=>{
+    if(currentQ < quizData.length){
+ques.innerText= quizData[currentQ].question;
 }
-quest();
+}
