@@ -9,6 +9,7 @@ let exit1=document.querySelector("#exit1");
 let cnt=document.querySelector("#continue");
 let ques=document.querySelector("#Question");
 let score_msg=document.querySelector("#score");
+let next=document.querySelector("#next");
 let currentQ=0;
 let currentO=0;
 let sec=0;
@@ -58,19 +59,20 @@ for(let btn of btns){
 }
 }
 }
-
+function game(){
 for(let btn of btns){
     btn.addEventListener('click',(e)=>{
+        console.log(currentQ);
         let select=e.target.innerText;
         let ans=quizData[currentQ].answer;
+        clearInterval(id);
+
 
         if(select==ans){
             e.target.style.backgroundColor="#87e06c";
             e.target.style.border="3px solid  #192a4a";
-               clearInterval(id);
               score++;
-        }
-              
+        } 
           else{
             e.target.style.backgroundColor="#f34f4f";
           e.target.style.color="white";
@@ -80,35 +82,33 @@ for(let btn of btns){
                   
                 }
             }
-             
-
           }
 
-        setTimeout(()=>{
-            e.target.style.backgroundColor="white";
-            e.target.style.color="#192a4a";
-            for(let btn of btns){
-                btn.style.backgroundColor="white";
-                btn.style.color="#192a4a";
-            }
-            if(currentQ==4){
-                msg.classList.remove("hide");
-                score_msg.innerText=`Nice, you got ${score} out of 5`;
-
-            }
-            currentQ++;
-            quest();
-            currentO=0;
-            storeOp();
-           
-           
-        },1000);
-        
+            setTimeout(()=>{
+                e.target.style.backgroundColor="white";
+                e.target.style.color="#192a4a";
+                for(let btn of btns){
+                    btn.style.backgroundColor="white";
+                    btn.style.color="#192a4a";
+                }
+                if(currentQ==4){
+                    msg.classList.remove("hide");
+                    score_msg.innerText=`Nice, you got ${score} out of 5`;
     
-    });
+                }
+    
+                currentQ++;
+                quest();
+                currentO=0;
+                storeOp();
+               
+            },1000);
+            
+        
+        });
 
 }
-
+}
   
 
 //start btn
@@ -120,6 +120,8 @@ startBtn.addEventListener('click', ()=>{
 
 cnt.addEventListener('click',()=>{
     startPg.classList.add("hide");
+   
+    game();
     id= setInterval(()=>{
         msec++;
         if(msec==100){
@@ -155,8 +157,9 @@ exit1.addEventListener('click',()=>{
     msg.classList.add("hide");
     startPg.classList.toggle("hide");
 
-});
+    
 
+});
 
 
 let quest=()=>{
@@ -164,3 +167,4 @@ let quest=()=>{
 ques.innerText= quizData[currentQ].question;
 }
 }
+
