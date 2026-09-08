@@ -70,7 +70,6 @@ cnt.addEventListener('click',()=>{
 let store=()=>{
     if(currentQ < quizData.length){
         ques.innerText= quizData[currentQ].question;
-        console.log(currentO,currentQ);
 
 for(let btn of btns){
     btn.innerText=quizData[currentQ].options[currentO];
